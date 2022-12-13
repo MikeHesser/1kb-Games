@@ -1,5 +1,5 @@
 # 1kB-Games
-Small Amstrad-CPC games. Each game is not longer than 1024 bytes
+Eine Sammlung kleiner Schneider-CPC Spiele. Jedes Spiel ist nicht länger als 1kB (1024 bytes).
 
 
 ## EMERGENCY
