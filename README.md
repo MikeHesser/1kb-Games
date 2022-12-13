@@ -1,7 +1,6 @@
 # 1kb-Games
 A collection of small Amstrad-CPC games. Each game is not longer than 1kB (1024 bytes).
 
-
 ## EMERGENCY
 
 !!!!ALARM!!!! You as the captain of the spaceship ENTERPRISE just get the message that
@@ -15,8 +14,7 @@ to create a landing strip. Your spaceship flies from left to right across the sc
 Screen and constantly loses altitude. With the <SPACE> BUTTON you can drop unlimited bombs, but only one at a time.
 but only one at a time!
 
-It is advisable to always bomb the highest buildings,
-otherwise there will inevitably be a collision. Once you have landed safely, the next level comes,
+It is advisable to always bomb the highest buildings, otherwise there will inevitably be a collision. Once you have landed safely, the next level comes,
 but with the difference that your spaceship will sink even faster.
  
 ![Emergency](https://github.com/MikeHesser/1kb-Games/blob/main/images/emergency.png)
@@ -48,11 +46,8 @@ In this skill game, the player has the task of landing his space shuttle on a la
 Once the shuttle has been successfully brought to the landing site, the game starts all over again. With one difference: The tunnel is even narrower... 
 
 * Cursor up: vertical thrust
-* Cursor left: Acceleration to the left
+* Cursor left: acceleration to the left
 * Cursor right: acceleration to the right
  
 ![Moonlander](https://github.com/MikeHesser/1kb-Games/blob/main/images/moonlander.png)
-
-
-Translated with www.DeepL.com/Translator (free version)
 
