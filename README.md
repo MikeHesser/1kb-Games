@@ -47,8 +47,8 @@ Die Steuerung erfolgt über die Cursortasten.
 Bei diesem Geschicklichkeitsspiel hat der Spieler die Aufgabe, seine Raumfähre auf einem Landeplatz unter der Mondoberfläche zu landen. Dabei kann er über die Cursortasten den horizontalen und den vertikalen Schub regeln.
 Hat man die Fähre erfolgreich an den Landeplatz gebracht fängt das ganze von vorne an. Mit einem Unterschied: Der Tunnel ist noch schmäler... 
 
-Cursor oben: Schub vertikal
-Cursor links: Beschleunigung nach links
-Cursor rechts: Beschleunigung nach rechts
+* Cursor oben: Schub vertikal
+* Cursor links: Beschleunigung nach links
+* Cursor rechts: Beschleunigung nach rechts
  
-![Moonlander](https://github.com/MikeHesser/1kb-Games/blob/main/images/moonland.png)
+![Moonlander](https://github.com/MikeHesser/1kb-Games/blob/main/images/moonlander.png)
