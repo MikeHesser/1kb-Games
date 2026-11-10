@@ -51,3 +51,14 @@ Once the shuttle has been successfully brought to the landing site, the game sta
  
 ![Moonlander](https://github.com/MikeHesser/1kb-Games/blob/main/images/moonlander.png)
 
+
+## Tron
+
+A game for two players, based on the light cycle race from the movie "Tron". Both players drive across the screen and leave a trail behind them. Whoever crashes into a trail or into the wall loses the round: the screen flashes in the color of the loser and the other player gets a point. Then the next round starts.
+
+With the turbo key a player moves two pixels in one step instead of one – this way you can even jump over a trail.
+
+* Player 1 (yellow): cursor keys, turbo with SPACE
+* Player 2 (cyan): W (up), Z (down), A (left), S (right), turbo with the small ENTER key
+
+![Tron](https://github.com/MikeHesser/1kb-Games/blob/main/images/tron.png)

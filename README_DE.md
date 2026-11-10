@@ -52,3 +52,14 @@ Cursor links: Beschleunigung nach links
 Cursor rechts: Beschleunigung nach rechts
  
 ![Moonlander](https://github.com/MikeHesser/1kb-Games/blob/main/images/moonland.png)
+
+## Tron
+
+Ein Spiel für zwei Spieler nach dem Lichtrad-Rennen aus dem Film "Tron". Beide Spieler fahren über den Bildschirm und ziehen dabei eine Spur hinter sich her. Wer gegen eine Spur oder gegen die Wand fährt, verliert die Runde: Der Bildschirm blinkt in der Farbe des Verlierers und der andere Spieler bekommt einen Punkt. Dann beginnt die nächste Runde.
+
+Mit der Turbo-Taste kommt man in einem Schritt zwei Pixel statt einem voran – so kann man sogar über eine Spur springen.
+
+* Spieler 1 (gelb): Cursortasten, Turbo mit der SPACE-Taste
+* Spieler 2 (türkis): W (oben), Z (unten), A (links), S (rechts), Turbo mit der kleinen ENTER-Taste
+
+![Tron](https://github.com/MikeHesser/1kb-Games/blob/main/images/tron.png)
