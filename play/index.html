@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1kB Games – Amstrad CPC</title>
+<style>
+  :root { --bg:#0b0b14; --card:#15152a; --fg:#e8e8f0; --dim:#9a9ab0; --acc:#ffff55; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:15px/1.5 system-ui, sans-serif; padding:32px 16px 48px; }
+  main { max-width:1000px; margin:0 auto; }
+  h1 { font-size:28px; margin:0 0 4px; color:var(--acc); letter-spacing:.5px; }
+  p.lead { color:var(--dim); margin:0 0 28px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:18px; }
+  a.card { display:block; background:var(--card); border-radius:10px; overflow:hidden; color:inherit; text-decoration:none;
+    box-shadow:0 0 0 1px #262645; transition:transform .12s, box-shadow .12s; }
+  a.card:hover { transform:translateY(-2px); box-shadow:0 0 0 2px var(--acc); }
+  a.card img { display:block; width:100%; aspect-ratio:320/227; image-rendering:pixelated; background:#000080; }
+  .t { padding:12px 14px 14px; }
+  .t b { display:block; font-size:17px; margin-bottom:2px; }
+  .t span { color:var(--dim); font-size:13.5px; }
+  footer { color:var(--dim); margin-top:32px; font-size:13px; }
+  footer a { color:#8ab4ff; }
+</style>
+</head>
+<body>
+<main>
+  <h1>1kB Games</h1>
+  <p class="lead">Small Amstrad CPC games by Mike Hesser – each one not longer than 1024 bytes of BASIC.
+    The original listings run here in the browser on a small CPC emulation.</p>
+  <div class="grid">
+    <a class="card" href="emergency/"><img src="../images/emergency.png" alt=""><div class="t"><b>Emergency</b><span>Bomb the city to make a landing strip.</span></div></a>
+    <a class="card" href="shooter/"><img src="../images/shooter.png" alt=""><div class="t"><b>Shooter</b><span>Two players, two cannons and a mountain in between.</span></div></a>
+    <a class="card" href="hanoi/"><img src="../images/hanoi.png" alt=""><div class="t"><b>The towers of Hanoi</b><span>Move the tower, one stone at a time.</span></div></a>
+    <a class="card" href="hunting/"><img src="../images/hunting.png" alt=""><div class="t"><b>Hunting</b><span>Stay alive as long as possible.</span></div></a>
+    <a class="card" href="moonlander/"><img src="../images/moonlander.png" alt=""><div class="t"><b>Moonlander</b><span>Land the shuttle below the lunar surface.</span></div></a>
+    <a class="card" href="tron/"><img src="../images/tron.png" alt=""><div class="t"><b>Tron</b><span>Light cycle race for two players.</span></div></a>
+  </div>
+  <footer>Source code and descriptions: <a href="https://github.com/MikeHesser/1kb-Games">github.com/MikeHesser/1kb-Games</a></footer>
+</main>
+</body>
+</html>

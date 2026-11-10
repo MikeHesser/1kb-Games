@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tron – CPC 1kB</title>
+</head>
+<body>
+<!-- Original-Listing (Locomotive BASIC, Amstrad/Schneider CPC) – wird von cpc.js ausgeführt -->
+<script type="text/plain" id="bas">
+100 DEFINT a-z
+110 MODE 1:MOVE 0,0:DRAWR 639,0,3:DRAWR 0,383:DRAWR -639,0:DRAWR 0,-380:DRAWR 636,0:DRAWR 0,378:DRAWR-634,0:DRAWR 0,-380
+120 LOCATE 1,1:PEN 1:PRINT sc1:LOCATE 26,1:PEN 2:PRINT sc2
+130 x=200:y=200:x1=440:y1=200:xs=2:ys=0:xf=-2:yf=0:fk=1:fk1=1
+140 IF NOT INKEY(0)THEN xs=0:ys=2
+150 IF NOT INKEY(2)THEN xs=0:ys=-2
+160 IF NOT INKEY(8)THEN xs=-2:ys=0
+170 IF NOT INKEY(1)THEN xs=2:ys=0
+180 IF NOT INKEY(47)THEN fk=2
+190 IF NOT INKEY(59)THEN xf=0:yf=2
+200 IF NOT INKEY(71)THEN xf=0:yf=-2
+210 IF NOT INKEY(69)THEN xf=-2:yf=0
+220 IF NOT INKEY(60)THEN xf=2:yf=0
+230 IF NOT INKEY(6)THEN fk1=2
+240 x=x+xs*fk:y=y+ys*fk:x1=x1+xf*fk1:y1=y1+yf*fk1
+250 IF TEST(x,y)<>0 THEN ik=1:GOTO 290 ELSE IF TEST(x1,y1)<>0 THEN ik=2:GOTO 290
+270 PLOT x,y,1:PLOT x1,y1,2:fk=1:fk1=1:GOTO 140
+290 FOR n=1 TO 8:FOR a=0 TO 26:INK ik,a:NEXT:NEXT:CALL &BC02
+300 IF ik=2 THEN sc1=sc1+1 ELSE sc2=sc2+1
+310 GOTO 110
+</script>
+<script src="../cpc.js"></script>
+<script>
+CPC.boot({ source: document.getElementById('bas').textContent,
+  info: '<b>Tron</b> für zwei Spieler · Gelb: Cursortasten, Turbo <kbd>Leertaste</kbd> · Türkis: <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> und die Taste links unten (<kbd>Z</kbd>/<kbd>Y</kbd>), Turbo <kbd>Enter</kbd><br>Nach „Ready“ startet <kbd>Enter</kbd> oder ein Klick das Spiel neu · <kbd>Esc</kbd> bricht ab · <a href="../">alle Spiele</a> · <a href="https://github.com/MikeHesser/1kb-Games/blob/main/src/tron.bas">BASIC-Listing</a>' });
+</script>
+</body>
+</html>

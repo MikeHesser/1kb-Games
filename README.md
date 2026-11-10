@@ -1,6 +1,10 @@
 # 1kb-Games
 A collection of small Amstrad-CPC games. Each game is not longer than 1kB (1024 bytes).
 
+**Play them in the browser:** https://mikehesser.github.io/1kb-Games/play/
+
+The original BASIC listings run there unchanged on a small Amstrad CPC emulation written in JavaScript (`play/cpc.js`).
+
 ## EMERGENCY
 
 !!!!ALARM!!!! You as the captain of the spaceship ENTERPRISE just get the message that
@@ -17,18 +21,24 @@ but only one at a time!
 It is advisable to always bomb the highest buildings, otherwise there will inevitably be a collision. Once you have landed safely, the next level comes,
 but with the difference that your spaceship will sink even faster.
  
+▶ [Play in the browser](https://mikehesser.github.io/1kb-Games/play/emergency/)
+
 ![Emergency](https://github.com/MikeHesser/1kb-Games/blob/main/images/emergency.png)
 
 ## Shooter
  
 In this game two players try to destroy each other's ground cannon via a well-aimed shot. The trajectory of the projectile is determined by specifying the strength and angle of the shot, which also has to go over a mountain.
  
+▶ [Play in the browser](https://mikehesser.github.io/1kb-Games/play/shooter/)
+
 ![Shooter](https://github.com/MikeHesser/1kb-Games/blob/main/images/shooter.png)
  
 ## The towers of Hanoi
  
 The "Towers of Hanoi" is a well-known strategy game. The goal is to rebuild a tower consisting of stones in a different place by rearranging each stone. 
 The rearrangement is done by specifying the position of the stone as well as the destination. The stone must not be larger than the stone at the destination.
+
+▶ [Play in the browser](https://mikehesser.github.io/1kb-Games/play/hanoi/)
 
 ![Hanoi](https://github.com/MikeHesser/1kb-Games/blob/main/images/hanoi.png)
 
@@ -38,6 +48,8 @@ The goal of this game is simple: stay alive as long as possible! Try to avoid th
 
 The game is controlled with the cursor keys.
  
+▶ [Play in the browser](https://mikehesser.github.io/1kb-Games/play/hunting/)
+
 ![Hunting](https://github.com/MikeHesser/1kb-Games/blob/main/images/hunting.png)
  
 ## Moonlander
@@ -49,8 +61,9 @@ Once the shuttle has been successfully brought to the landing site, the game sta
 * Cursor left: acceleration to the left
 * Cursor right: acceleration to the right
  
-![Moonlander](https://github.com/MikeHesser/1kb-Games/blob/main/images/moonlander.png)
+▶ [Play in the browser](https://mikehesser.github.io/1kb-Games/play/moonlander/)
 
+![Moonlander](https://github.com/MikeHesser/1kb-Games/blob/main/images/moonlander.png)
 
 ## Tron
 
@@ -61,4 +74,14 @@ With the turbo key a player moves two pixels in one step instead of one – this
 * Player 1 (yellow): cursor keys, turbo with SPACE
 * Player 2 (cyan): W (up), Z (down), A (left), S (right), turbo with the small ENTER key
 
+▶ [Play in the browser](https://mikehesser.github.io/1kb-Games/play/tron/)
+
 ![Tron](https://github.com/MikeHesser/1kb-Games/blob/main/images/tron.png)
+
+## About the browser versions
+
+`play/cpc.js` contains a small Locomotive BASIC interpreter together with the parts of the CPC that the games need:
+MODE 1 with the 27-colour palette, text windows, PRINT/INPUT with control codes, graphics (PLOT, DRAW, TEST, TAG and XOR mode),
+SOUND with its queue, EVERY interrupts, INKEY with the CPC key numbers and roughly the speed of the real machine.
+The screen uses the original CPC character set.
+After "Ready", Enter or a click starts the game again, Esc stops a running program.
