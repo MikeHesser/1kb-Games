@@ -1016,8 +1016,8 @@ const CSS = `
 :root { --bg:#111; --fg:#bbb; --dim:#777; }
 html,body { margin:0; min-height:100%; background:var(--bg); color:var(--fg); font:13px/1.45 system-ui, sans-serif; }
 body { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; padding:16px; box-sizing:border-box; min-height:100vh; }
-.cpc { padding:4.5% 5.5%; box-shadow:0 0 0 2px #333, 0 10px 40px #000; width:min(92vw, calc((100vh - 170px) * 1.35), 900px); box-sizing:border-box; }
-.cpc canvas { display:block; width:100%; aspect-ratio:8/5; image-rendering:pixelated; image-rendering:crisp-edges; }
+.cpc { box-shadow:0 0 0 2px #333, 0 10px 40px #000; }
+.cpc canvas { display:block; image-rendering:pixelated; image-rendering:crisp-edges; }
 .info { color:var(--dim); text-align:center; max-width:900px; }
 .info b { color:var(--fg); font-weight:600; }
 .info kbd { border:1px solid #444; border-radius:3px; padding:0 4px; color:var(--fg); font:inherit; }
@@ -1029,6 +1029,17 @@ function boot(opts) {
   const cv = document.createElement('canvas'); cv.width = SW; cv.height = SH; frame.appendChild(cv);
   const info = document.createElement('div'); info.className = 'info'; info.innerHTML = opts.info || '';
   document.body.append(frame, info);
+  // whole-number scaling: every CPC pixel (MODE 1) gets the same number of device pixels,
+  // otherwise some pixels become wider than others and the letter spacing looks uneven
+  const fit = () => {
+    const dpr = window.devicePixelRatio || 1;
+    const availW = Math.min(window.innerWidth - 32, 1200), availH = window.innerHeight - info.offsetHeight - 56;
+    const k = Math.max(1, Math.floor(Math.min(availW * dpr / 384, availH * dpr / 272)));   // 384x272 = screen + border
+    cv.style.width = (320 * k / dpr) + 'px'; cv.style.height = (200 * k / dpr) + 'px';
+    frame.style.padding = `${36 * k / dpr}px ${32 * k / dpr}px`;
+  };
+  fit();
+  window.addEventListener('resize', fit);
   const m = new CPC(cv, frame);
   const b = new Basic(m, opts.source);
   b.start();
